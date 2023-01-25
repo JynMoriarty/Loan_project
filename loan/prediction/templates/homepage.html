@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+<body>
+    <h1>La Streetzer</h1>
+    <form method="POST">
+
+        {% csrf_token %}
+        {% for field in form %}
+            <div class = "quest">
+                <div class='container'>
+                <label>{{field.label}} </label>
+                        {{field}}
+                </div>
+            </div>
+        
+        {% endfor %}
+        <div>
+            <input class= 'button'type="submit" value="Valider">
+        </div>
+    </form
+</body>
+
