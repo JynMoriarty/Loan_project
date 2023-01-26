@@ -10,11 +10,13 @@ def home_view(request):
     if request.method == 'POST':
         form=quest(request.POST)
         if form.is_valid():
+            request.session['result']= form.cleaned_data
+            
             return HttpResponseRedirect(reverse(result_view))
+    else:
 
-    return render(request, "homepage.html", {'form':quest})
+        return render(request, "homepage.html", {'form':quest})
 
 def result_view(request):
-
-
-    return render(request,"result.html")
+    result = request.session.get("result")
+    return render(request,"result.html",{"result":result})
