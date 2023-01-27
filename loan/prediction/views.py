@@ -2,19 +2,27 @@ from django.shortcuts import render
 from . import forms
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+import json
+import requests 
 
-# Create your views here.
+
+        
 
 def home_view(request):
+    headers = {'accept' : 'application/json','Content-Type': 'application/json'}
     quest = forms.PredictionForm
     if request.method == 'POST':
-        form=quest(request.POST)
+        form=quest(request.POST or None)
         if form.is_valid():
-            return HttpResponseRedirect(reverse(result_view))
+            url = 'http://127.0.0.1:8001/predict'
+            conversion = json.dumps(form.cleaned_data)
+            info= requests.post(url = url,data = conversion,headers=headers)
+            result = info.text
+            
 
-    return render(request, "homepage.html", {'form':quest})
+            return render(request,"result.html",{"result":result})
+    else:
 
-def result_view(request):
 
+        return render(request, "homepage.html", {'form':quest})
 
-    return render(request,"result.html")

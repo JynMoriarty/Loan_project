@@ -3,20 +3,20 @@ import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-with open("xgb.pkl", 'rb') as file:
+with open('xgb.pkl','rb') as file:
     xgb = pickle.load(file)
 
 app = FastAPI()
 
 class request(BaseModel):
     Industry: str
-    Term : float
-    NoEmp : float
+    Term : int
+    NoEmp : int
     GrAppv : float
-    NewExist : float
-    CreateJob : float
-    Retainedjob : float
-    FranchiseCode : float
+    NewExist : str
+    CreateJob : int
+    RetainedJob : int
+    FranchiseCode : str
     UrbanRural : str
     Real_estate : str
     
