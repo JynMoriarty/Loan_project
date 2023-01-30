@@ -24,5 +24,5 @@ class Features(models.Model):
 
 class State(models.Model):
     states = [(i,i) for i in state]
-    State = models.CharField(max_length=3,choices =states,default=state[0])
 
+    State = models.CharField(max_length=3,choices =states,default=state[0])

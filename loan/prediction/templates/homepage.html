@@ -4,13 +4,16 @@
 <body>
     <h1>La Streetzer</h1>
     <form class='square' method="POST">
-
+        
         {% csrf_token %}
+            {{map|safe}}
+
             {% for state in form2  %}
             <div class = "quest">
 
                 <label >{{state.label}}</label>
-                    {{state}}
+                {{state}}
+
             </div>
             {% endfor %}
             {% for field in form %}
