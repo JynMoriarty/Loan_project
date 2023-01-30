@@ -1,7 +1,7 @@
 from django.db import models
 import pandas as pd
 # Create your models here.
-df = pd.read_csv('/home/apprenant/Bureau/loan/Loan_project/data.csv')
+df = pd.read_csv('/home/apprenant/Téléchargements/Loan_project/data.csv')
 indus = df.Industry.unique()
 class Features(models.Model):
 
