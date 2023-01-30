@@ -23,12 +23,15 @@ def accueil(request):
 def home_view(request):
     headers = {'accept' : 'application/json','Content-Type': 'application/json'}
     quest = forms.PredictionForm
+    state = forms.StateForm
     if request.method == 'POST':
         form=quest(request.POST or None)
-        if form.is_valid():
+        form2 = state(request.POST or None)
+        if form.is_valid() and form2.is_valid():
             url = 'http://127.0.0.1:8001/predict'
-            
-            conversion = json.dumps(form.cleaned_data)
+            res = form.cleaned_data | form2.cleaned_data
+            print(type(form.cleaned_data))
+            conversion = json.dumps(res)
             info= requests.post(url = url,data = conversion,headers=headers)
             raw_result = info.text
             print(raw_result)
@@ -44,5 +47,5 @@ def home_view(request):
     else:
 
 
-        return render(request, "homepage.html", {'form':quest})
+        return render(request, "homepage.html", {'form':quest,'form2':state})
 

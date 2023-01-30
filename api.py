@@ -19,6 +19,7 @@ class request(BaseModel):
     FranchiseCode : str
     UrbanRural : str
     Real_estate : str
+    State : str
     
 @app.post("/predict")
     

@@ -3,6 +3,8 @@ import pandas as pd
 # Create your models here.
 df = pd.read_csv('/home/apprenant/Bureau/loan/Loan_project/data.csv')
 indus = df.Industry.unique()
+state = df.State.unique()
+
 class Features(models.Model):
 
     industries = [(i,i) for i in indus]
@@ -19,4 +21,8 @@ class Features(models.Model):
     FranchiseCode = models.CharField(max_length= 90 ,null=False,default='1')
     UrbanRural = models.CharField(max_length=9,choices=urbral,default=urbral[0])
     Real_estate = models.CharField(max_length=9,choices=yesno,default=yesno[0])
+
+class State(models.Model):
+    states = [(i,i) for i in state]
+    State = models.CharField(max_length=3,choices =states,default=state[0])
 

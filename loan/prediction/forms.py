@@ -19,3 +19,9 @@ class PredictionForm(forms.ModelForm):
             'UrbanRural': "Etes vous dans une zone urbaine ou rural ?",
             'Real_estate': "Est ce que vous possédez un patrimoine immobilier ?"
         }
+
+class StateForm(forms.ModelForm) :
+    class Meta:
+        model = models.State
+        fields = '__all__'
+        labels={ 'State' : 'Choissisez  la localisation de votre entreprise'}
