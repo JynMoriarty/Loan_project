@@ -9,8 +9,6 @@ READ ME
 -Scikit-learn
 -Django
 
-## Description
-
 ## Pré-Requis 
 
 -Python
@@ -23,9 +21,6 @@ READ ME
 Contexte : Nous faisons parties de la SBA qui est une organisation qui aide les entreprises à effectuer un prêt en se portant garant.
 Analyse et modélisation des prix du marché dans le comté de King dans l'état de Washington, application de régression linéaire et création d'une application web.
 
-
-
-
 ## Fabriqué avec
 
 - **Visual Studio Code** - Editeur de code.
@@ -34,7 +29,6 @@ Analyse et modélisation des prix du marché dans le comté de King dans l'état
 - **Python** - Langage de programmation interprété.
 - **Streamlit** - Création d'application web.
 - **Scikit-learn** Librairie python.
-
 
 ## Fabriqué avec
 
