@@ -19,7 +19,6 @@ body{
 }
 .quest{
     text-align: start;
-    border-radius: 25px;
     border: 2px solid #522d5b;
     background-color: antiquewhite;
     color: black;
@@ -68,4 +67,5 @@ li a:hover {
     background-color: white;    
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
     box-shadow: 5px 5px 15px 5px #000000;
+    border-radius: 25px;
 }
