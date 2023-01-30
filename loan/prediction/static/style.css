@@ -4,6 +4,11 @@ h1 {
     font-size: 50px;
 
 }
+h2 {
+    text-align: left;
+    font-family: "kaushans";
+    font-size: 30px;
+}
 .description{
     font-family:"montserrat";
 }
@@ -22,11 +27,6 @@ body{
     margin: 10px;
      
 }
-.container{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-}
 .button{
     border-radius: 25px;
     background-color: #04AA6D;
@@ -37,4 +37,35 @@ body{
     margin: 4px 2px;
     cursor: pointer;
     text-align: center;
+}
+
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+  }
+.active {
+    background-color: #04AA6D;
+  }
+.square {
+    max-width: 60%;
+    margin: 0 auto;
+    background-color: white;    
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
 }

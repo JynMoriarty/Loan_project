@@ -3,19 +3,22 @@
 
 <body>
     <h1>La Streetzer</h1>
-    <form method="POST">
+    <form class='square' method="POST">
 
         {% csrf_token %}
-        {% for field in form %}
+            {% for state in form2  %}
             <div class = "quest">
-                <div class='container'>
-                <label>{{field.label}} </label>
+
+                <label >{{state.label}}</label>
+                    {{state}}
+            </div>
+            {% endfor %}
+            {% for field in form %}
+                <div class = "quest">
+                    <label>{{field.label}} </label>
                         {{field}}
                 </div>
-            </div>
-            <div></div>
-        
-        {% endfor %}
+            {% endfor %}
         <div>{{result}} </div>
         <div>
             <input class= 'button'type="submit" value="Valider">

@@ -19,6 +19,7 @@ class request(BaseModel):
     FranchiseCode : str
     UrbanRural : str
     Real_estate : str
+    State : str
     
 @app.post("/predict")
     
@@ -26,4 +27,4 @@ def predict(data:request):
     new_data=pd.DataFrame(dict(data),index = [0])
 
     class_idx=xgb.predict(new_data)[0]
-    return {'class':int(class_idx)}
+    return int(class_idx)
