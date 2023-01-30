@@ -4,6 +4,11 @@ h1 {
     font-size: 50px;
 
 }
+h2 {
+    text-align: left;
+    font-family: "kaushans";
+    font-size: 30px;
+}
 .description{
     font-family:"montserrat";
 }
@@ -37,4 +42,27 @@ body{
     margin: 4px 2px;
     cursor: pointer;
     text-align: center;
+}
+.contain {
+    background-color: #041B15;
+    padding: 5px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    border-radius: 25px;
+    border:15px solid #133C55;
+    width: 1811px;
+    
+
+}
+nav {
+
+    width: 100%;
+    max-width: 1000%;
+    margin: 0%;
+}
+nav ul {
+    list-style:none;
+    display: flex;
+    padding: 0%;
 }
