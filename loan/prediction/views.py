@@ -61,7 +61,7 @@ def home_view(request):
         form=quest(request.POST or None)
         form2 = state(request.POST or None)
         if form.is_valid() and form2.is_valid():
-            url = 'http://127.0.0.1:8001/predict'
+            url = 'http://0.0.0.0:8001/predict'
             print(form2.cleaned_data)
             res = form.cleaned_data | form2.cleaned_data
             print(form.cleaned_data)
