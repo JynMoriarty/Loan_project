@@ -8,7 +8,7 @@ import folium
 import pandas as pd 
 import geopandas as gpd
 
-df = pd.read_csv('/home/apprenant/Bureau/loan/Loan_project/data.csv')
+df = pd.read_csv('loan/Loan_project/loan/data.csv')
 
 def percent_of_CHGOFF(df):
     nb_CHGOFF = df[df=='1'].shape[0]
