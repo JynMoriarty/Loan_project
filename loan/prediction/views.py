@@ -8,7 +8,7 @@ import folium
 import pandas as pd 
 import geopandas as gpd
 
-df = pd.read_csv('loan/Loan_project/loan/data.csv')
+df = pd.read_csv('data.csv')
 
 def percent_of_CHGOFF(df):
     nb_CHGOFF = df[df=='1'].shape[0]
@@ -17,7 +17,7 @@ def percent_of_CHGOFF(df):
 df_state = df[['State','MIS_Status']]
 df_state = df_state.groupby('State').agg(percent_of_CHGOFF).rename(columns={'MIS_Status' : 'percent_of_CHGOFF'}).reset_index()
 
-gdf = gpd.read_file('/home/apprenant/Bureau/loan/Loan_project/us-states.json')
+gdf = gpd.read_file('us-states.json')
 
 
 # read a GeoJSON file with Pandas
