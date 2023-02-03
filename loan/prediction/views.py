@@ -61,7 +61,7 @@ def home_view(request):
         form=quest(request.POST or None)
         form2 = state(request.POST or None)
         if form.is_valid() and form2.is_valid():
-            url = 'https://loan-prediction-g3v9.onrender.com/predict'
+            url = 'https://floan-api.onrender.com/predict'
             print(form2.cleaned_data)
             res = form.cleaned_data | form2.cleaned_data
             print(form.cleaned_data)
